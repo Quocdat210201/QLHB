@@ -1,0 +1,8 @@
+:root{
+    --bg-primary-color: linear-gradient(rgb(94, 160, 246), white);
+}
+
+.mw-1400{
+    width: 1400px;
+    margin: auto;
+}
