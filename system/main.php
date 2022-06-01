@@ -28,6 +28,10 @@
                     include("libs/addcategory.php");
                 }elseif($router == 'notification'){
                     include("libs/notification.php");
+                }elseif($router == 'updateDRL'){
+                    include("libs/CapNhatDRL.php");
+                }elseif($router == 'detail_updateDRL'){
+                    include("libs/CapNhatDRL_ChiTiet.php");
                 }else{
                     include("libs/index.php");
                 }
