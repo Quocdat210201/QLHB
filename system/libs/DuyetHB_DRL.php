@@ -14,6 +14,31 @@
             border: 1px solid black;
             background-color: white;
         }
+
+        .navigation {
+            width: 300px;
+        }
+        .mainmenu,
+        .submenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .mainmenu a {
+            display: block;
+            background-color: lightblue;
+            text-decoration: none;
+            padding: 10px;
+            color: #000;
+        }
+        .mainmenu a:hover {
+            background-color: red;
+        }
+        .mainmenu li:hover .submenu {
+            display: block;
+            max-height: 200px;
+        }
+
     </style>
 </head>
 
@@ -44,11 +69,11 @@
         </div>
     </div>
 
-    <div class="container" style="margin-left:10px; margin-left: auto; margin-right: auto; margin-top: -50px;">
-        <div class="row">
-            <div class="col-12 col-lg-10">
+    <div class="container" style="margin-left:10px; margin-left: auto; margin-right: auto; margin-top: -50px; width: 100%;">
+        <div class="row" style="width: 120%;">
+            <div class="col-12 col-lg-10" >
                 <!-- <tr style=" background-color: #053FC9;color: whitesmoke; text-align: center; "> -->
-                <table class="table table-bordered" style="width: 120%;">
+                <table class="table table-bordered" style="width: 70%; float: left; ">
                     <thead>
                         <tr>
                             <th scope="col" style="text-align: center;">Nội dung đánh giá</th>
@@ -86,12 +111,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- Có ý thức tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa</p>
-                                <p>- Có đăng ký, thực hiện, báo cáo đề tài NCKH đúng tiến độ hoặc đăng ký, tham dự kỳ thi sinh viên giỏi các cấp </p></td>
+                            <td>
+                                <p>- Có ý thức tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa</p>
+                                <p>- Có đăng ký, thực hiện, báo cáo đề tài NCKH đúng tiến độ hoặc đăng ký, tham dự kỳ thi sinh viên giỏi các cấp </p>
+                            </td>
                             <td style="text-align: center;">
-                            <p>2</p></br>
-                            <p>2</p>
-                        </td>
+                                <p>2</p></br>
+                                <p>2</p>
+                            </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck3" disabled checked>
@@ -102,7 +129,7 @@
                                     <input type="checkbox" class="custom-control-input" id="customCheck3" disabled checked>
                                     <label class="custom-control-label" for="customCheck3"></label>
                                 </div>
-                                
+
                             </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -117,7 +144,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- Không vi phạm quy chế thi và kiểm tra</p></td>
+                            <td>
+                                <p>- Không vi phạm quy chế thi và kiểm tra</p>
+                            </td>
                             <td style="text-align: center;">6</td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -133,7 +162,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- Được tập thể lớp công nhận có tinh thần vượt khó, phấn đấu vươn lên trong học tập</p></td>
+                            <td>
+                                <p>- Được tập thể lớp công nhận có tinh thần vượt khó, phấn đấu vươn lên trong học tập</p>
+                            </td>
                             <td style="text-align: center;">2</td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -149,15 +180,16 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- ĐTBCHK từ 3,2 đến 4,0</p>
-                            <p>- ĐTBCHK từ 2,0 đến 3,19</p>
-                            <p>- ĐTBCHK dưới 2,0</p>
-                        </td>
+                            <td>
+                                <p>- ĐTBCHK từ 3,2 đến 4,0</p>
+                                <p>- ĐTBCHK từ 2,0 đến 3,19</p>
+                                <p>- ĐTBCHK dưới 2,0</p>
+                            </td>
                             <td style="text-align: center;">
-                            <p>4</p>
-                            <p>2</p>
-                            <p>0</p> 
-                        </td>
+                                <p>4</p>
+                                <p>2</p>
+                                <p>0</p>
+                            </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1" disabled checked>
@@ -165,14 +197,14 @@
                                 </div>
                                 <p> </p>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled >
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
                                     <label class="custom-control-label" for="customCheck1"></label>
                                 </div>
                                 <p> </p>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
                                     <label class="custom-control-label" for="customCheck1"></label>
-                                </div>  
+                                </div>
                             </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -194,25 +226,19 @@
 
                     </tbody>
                 </table>
-                
-                <nav aria-label="..." style="margin-left: 40%;">
-                    <ul class="pagination">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">CÁC MỤC CHẤM </a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">I</a></li>
-                        <li class="page-item ">
-                            <a class="page-link" href="#">II <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">III</a></li>
-                        <li class="page-item"><a class="page-link" href="#">IV</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
+
+                <nav class="navigation" style="display:flex; margin-top: 7%;">
+                    <ul class="mainmenu">
+                        <li><a href=""> Mục I </a></li>
+                        <li><a href=""> Mục II</a></li>
+                        <li><a href=""> Mục III</a></li>
+                        <li><a href=""> Mục IV</a></li>
+                        <li><a href=""> Mục V</a></li>
                     </ul>
                 </nav>
-                <button type="button" class="btn btn-primary" style="margin-left: 100%; width: 20%;">Cập nhật</button>
             </div>
+            <button type="button"  class="btn btn-secondary" style="margin-left: 10%; width: 12%;" disabled>Xem DRL</button>
+            <button type="button" class="btn btn-primary" style="margin-left: 10%; width: 12%;" onclick="location.href='index.php?router=DuyetHB_HK'">Xem điểm Học Kì</button>
         </div>
     </div>
 </body>

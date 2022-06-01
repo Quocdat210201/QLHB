@@ -32,6 +32,12 @@
                     include("libs/CapNhatDRL.php");
                 }elseif($router == 'detail_updateDRL'){
                     include("libs/CapNhatDRL_ChiTiet.php");
+                }elseif($router == 'DuyetHB'){
+                    include("libs/DuyetHB.php");
+                }elseif($router == 'DuyetHB_DRL'){
+                    include("libs/DuyetHB_DRL.php");
+                }elseif($router == 'DuyetHB_HK'){
+                    include("libs/DuyetHB_HK.php");
                 }else{
                     include("libs/index.php");
                 }
