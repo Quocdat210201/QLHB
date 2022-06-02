@@ -78,106 +78,36 @@
                         <tr>
                             <th scope="col" style="text-align: center;">Nội dung đánh giá</th>
                             <th scope="col" style="text-align: center;">Điểm</th>
-                            <th scope="col" style="text-align: center;">Chọn cũ</th>
-                            <th scope="col" style="text-align: center;">Chọn mới</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td style="font-weight: bold ;">I. Đánh giá về ý thức học tập</td>
                             <td style="text-align: center;">20</td>
-                            <td style="text-align: center;">
-
-                            </td>
-                            <td style="text-align: center;">
-
-                            </td>
                         </tr>
-
                         <tr>
                             <td>- Có đi học chuyên cần, đúng giờ, nghiêm túc trong giờ học; đủ điều kiện dự thi tất cả các học phần</td>
                             <td style="text-align: center;">4</td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled checked>
-                                    <label class="custom-control-label" for="customCheck1"></label>
-                                </div>
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2"></label>
-                                </div>
-                            </td>
+                            
                         </tr>
                         <tr>
                             <td>
                                 <p>- Có ý thức tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa</p>
                                 <p>- Có đăng ký, thực hiện, báo cáo đề tài NCKH đúng tiến độ hoặc đăng ký, tham dự kỳ thi sinh viên giỏi các cấp </p>
                             </td>
-                            <td style="text-align: center;">
-                                <p>2</p></br>
-                                <p>2</p>
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3" disabled checked>
-                                    <label class="custom-control-label" for="customCheck3"></label>
-                                </div>
-                                <p></br></p>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3" disabled checked>
-                                    <label class="custom-control-label" for="customCheck3"></label>
-                                </div>
-
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4"></label>
-                                </div>
-                                <p></br></p>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck121">
-                                    <label class="custom-control-label" for="customCheck121"></label>
-                                </div>
-                            </td>
+                            <td style="text-align: center;">4</td>
                         </tr>
                         <tr>
                             <td>
                                 <p>- Không vi phạm quy chế thi và kiểm tra</p>
                             </td>
-                            <td style="text-align: center;">6</td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck5" disabled checked>
-                                    <label class="custom-control-label" for="customCheck5"></label>
-                                </div>
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                    <label class="custom-control-label" for="customCheck6"></label>
-                                </div>
-                            </td>
+                            <td style="text-align: center;">4</td>
                         </tr>
                         <tr>
                             <td>
                                 <p>- Được tập thể lớp công nhận có tinh thần vượt khó, phấn đấu vươn lên trong học tập</p>
                             </td>
-                            <td style="text-align: center;">2</td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled checked>
-                                    <label class="custom-control-label" for="customCheck1"></label>
-                                </div>
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                    <label class="custom-control-label" for="customCheck7"></label>
-                                </div>
-                            </td>
+                            <td style="text-align: center;">6</td>
                         </tr>
                         <tr>
                             <td>
@@ -187,47 +117,15 @@
                             </td>
                             <td style="text-align: center;">
                                 <p>4</p>
-                                <p>2</p>
                                 <p>0</p>
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled checked>
-                                    <label class="custom-control-label" for="customCheck1"></label>
-                                </div>
-                                <p> </p>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
-                                    <label class="custom-control-label" for="customCheck1"></label>
-                                </div>
-                                <p> </p>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
-                                    <label class="custom-control-label" for="customCheck1"></label>
-                                </div>
-                            </td>
-                            <td style="text-align: center;">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                    <label class="custom-control-label" for="customCheck8"></label>
-                                </div>
-                                <p> </p>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck12">
-                                    <label class="custom-control-label" for="customCheck12"></label>
-                                </div>
-                                <p> </p>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck11">
-                                    <label class="custom-control-label" for="customCheck11"></label>
-                                </div>
+                                <p>0</p>
                             </td>
                         </tr>
 
                     </tbody>
                 </table>
 
-                <nav class="navigation" style="display:flex; margin-top: 7%;">
+                <nav class="navigation" style="display:flex; margin-top: 5%;">
                     <ul class="mainmenu">
                         <li><a href=""> Mục I </a></li>
                         <li><a href=""> Mục II</a></li>
