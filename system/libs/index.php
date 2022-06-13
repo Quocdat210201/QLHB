@@ -11,8 +11,36 @@
     <title>Document</title>
 </head>
 <body>
+<h5 style="margin:10px 15px;">Tin tức - Thông báo học bổng<hr style="border-width: 1px;"></h5>
+
 <div class="homepage">
-    <img src="./assets/img/homepage.jpg" alt="">
+    <div class="home">
+        <div id="imghome"><img src="././assets/img/hb.jpg" alt=""></div>
+        <div id="texthome">
+            <h5>Học bổng UTE năm 2022 </h5>
+            <p>Hàng năm, Đại học Duy Tân trao tặng hàng trăm suất học bổng có giá trị <br>
+             lên đến hàng chục tỉ đồng với các “gói”: Học bổng Tài năng; Học bổng cho Thí sinh <br> đạt giải cấp Tỉnh/Thành phố; Học bổng đối với...</p>     
+            <a href="">Tìm hiểu thêm ></a>
+        </div>
+    </div>
+    <div class="home">
+        <div id="imghome"><img src="././assets/img/hbute.jpg" alt=""></div>
+            <div id="texthome">
+                <h5>Học bổng UTE năm 2022 </h5>
+                <p>Hàng năm, Đại học Duy Tân trao tặng hàng trăm suất học bổng có giá trị <br>
+                lên đến hàng chục tỉ đồng với các “gói”: Học bổng Tài năng; Học bổng cho Thí sinh <br> đạt giải cấp Tỉnh/Thành phố; Học bổng đối với...</p>     
+                <a href="">Tìm hiểu thêm ></a>
+            </div>
+    </div>
+    <div class="home">
+        <div id="imghome"><img src="././assets/img/hbute.jpg" alt=""></div>
+            <div id="texthome">
+                <h5>Học bổng UTE năm 2022 </h5>
+                <p>Hàng năm, Đại học Duy Tân trao tặng hàng trăm suất học bổng có giá trị <br>
+                lên đến hàng chục tỉ đồng với các “gói”: Học bổng Tài năng; Học bổng cho Thí sinh <br> đạt giải cấp Tỉnh/Thành phố; Học bổng đối với...</p>     
+                <a href="">Tìm hiểu thêm ></a>
+            </div>
+    </div>
 </div>
 </body>
 </html>
