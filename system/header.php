@@ -15,22 +15,22 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Quy chế và quy định <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
                         <a class="nav-link" href="#">Xem lịch sử nhận học bổng</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="index.php?router=statistical">Thống kê</a>
                     </li>
                     <li class="nav-item active">
+                        <a class="nav-link" href="index.php?router=updateDRL">Xem điểm</a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">Quản lý mục chấm</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php?router=notification">Thông báo</a>
+                    </li>
                 </ul>
-                <form class="form-inline" action="/action_page.php">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm......">
-                    <button class="btn btn-success" type="submit">Tìm kiếm</button>
-                </form>
+                
             </div>
         </nav>
     </div>

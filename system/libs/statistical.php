@@ -50,7 +50,7 @@
             </select>
             <input type="button" id="btntk" value="Thống kê">
         </div>
-        <div class="container" style="margin-left:10px">
+        <div class="container-wrap">
             <div class="row">
                 <div class="col-12 col-lg-10">
                     <table class="table table-striped">

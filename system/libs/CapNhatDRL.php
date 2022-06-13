@@ -19,7 +19,7 @@
 
 <body>
     <div class="wrappercl">
-        <div class="combox" style="margin-left: 150px;">
+        <div class="combox" style="margin-left: 90px">
             <label for="" style="font-weight: bold ;">Khoa: </label>
             <select name="Khoa">
                 <optgroup label="Khoa">
@@ -50,17 +50,17 @@
                     <option value="1.0.x">19T3</option>
                 </optgroup>
             </select>
-            <form class="form-inline" action="/action_page.php" style="display: inline; margin-left: 150px;">
+            <form class="form-inline" action="/action_page.php" style="display: inline; margin-left: 280px;">
                 <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên...">
                 <button class="btn btn-success" type="submit">Tìm kiếm</button>
             </form>
         </div>
     </div>
 
-    <div class="container" style="margin-left:10px; margin-left: auto; margin-right: auto;">
+    <div class="container-wrap" style="width: 1333px">
         <div class="row">
             <div class="col-12 col-lg-10">
-                <table class="table table-striped" style="width:150%">
+                <table class="table table-striped" style="width: 146%; margin: auto;">
                     <thead>
                         <tr style=" background-color: #053FC9;color: whitesmoke; text-align: center; ">
                             <th scope="col">STT</th>
@@ -123,7 +123,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <nav aria-label="..." style="margin-left: 50%;">
+                <nav aria-label="..." style="width: 99%;margin: 30px 0 0 57%;">
                     <ul class="pagination">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -138,7 +138,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button type="button" class="btn btn-primary" style="margin-left: 130%; width: 20%;">Duyệt</button>
+                <button type="button" class="btn btn-primary" style="margin-left: 124%; width: 20%;">Duyệt</button>
             </div>
         </div>
     </div>

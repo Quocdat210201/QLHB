@@ -19,36 +19,37 @@
 
 <body>
     <div class="wrappercl">
-        <div class="col-12 col-lg-9" style="margin-left:auto ; margin-right: auto;">
-            <label>Cập nhật điểm rèn luyện: </label>
-            <table class="table table-striped" style="width:60%">
-                <thead>
-                    <tr style=" background-color: #053FC9;color: whitesmoke; text-align: center; ">
-                        <th scope="col">STT</th>
-                        <th scope="col">Mã sinh viên</th>
-                        <th scope="col">Tên sinh viên</th>
-                        <th scope="col">Điểm rèn luyện</th>
-                        <th scope="col">Điểm TB Học kì</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="text-align: center ;" scope="row">1</td>
-                        <td style="text-align: center ;">1911505310109</td>
-                        <td style="font-weight: bold    ;">Nguyễn Vũ Dũng</td>
-                        <td style="text-align: center ;">90</td>
-                        <td style="color: red; text-align: center;">3.9</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container-wrap">
+            <div class="col-12 col-lg-9">
+                <label>Chi tiết điểm rèn luyện: </label>
+                <table class="table table-striped" style="width:134%">
+                    <thead>
+                        <tr style=" background-color: #053FC9;color: whitesmoke; text-align: center; ">
+                            <th scope="col">STT</th>
+                            <th scope="col">Mã sinh viên</th>
+                            <th scope="col">Tên sinh viên</th>
+                            <th scope="col">Điểm rèn luyện</th>
+                            <th scope="col">Điểm TB Học kì</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center ;" scope="row">1</td>
+                            <td style="text-align: center ;">1911505310109</td>
+                            <td style="font-weight: bold    ;">Nguyễn Vũ Dũng</td>
+                            <td style="text-align: center ;">90</td>
+                            <td style="color: red; text-align: center;">3.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-
-    <div class="container" style="margin-left:10px; margin-left: auto; margin-right: auto; margin-top: -50px;">
+    <div class="container"  style="max-width:90%; margin: 0 auto 10px; padding: 10px 13px;">
         <div class="row">
             <div class="col-12 col-lg-10">
                 <!-- <tr style=" background-color: #053FC9;color: whitesmoke; text-align: center; "> -->
-                <table class="table table-bordered" style="width: 120%;">
+                <table class="table table-bordered" style="width: 145%">
                     <thead>
                         <tr>
                             <th scope="col" style="text-align: center;">Nội dung đánh giá</th>
@@ -86,12 +87,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- Có ý thức tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa</p>
-                                <p>- Có đăng ký, thực hiện, báo cáo đề tài NCKH đúng tiến độ hoặc đăng ký, tham dự kỳ thi sinh viên giỏi các cấp </p></td>
+                            <td>
+                                <p>- Có ý thức tham gia các câu lạc bộ học thuật, các hoạt động học thuật, hoạt động ngoại khóa</p>
+                                <p>- Có đăng ký, thực hiện, báo cáo đề tài NCKH đúng tiến độ hoặc đăng ký, tham dự kỳ thi sinh viên giỏi các cấp </p>
+                            </td>
                             <td style="text-align: center;">
-                            <p>2</p></br>
-                            <p>2</p>
-                        </td>
+                                <p>2</p></br>
+                                <p>2</p>
+                            </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck3" disabled checked>
@@ -102,7 +105,7 @@
                                     <input type="checkbox" class="custom-control-input" id="customCheck3" disabled checked>
                                     <label class="custom-control-label" for="customCheck3"></label>
                                 </div>
-                                
+
                             </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -117,7 +120,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- Không vi phạm quy chế thi và kiểm tra</p></td>
+                            <td>
+                                <p>- Không vi phạm quy chế thi và kiểm tra</p>
+                            </td>
                             <td style="text-align: center;">6</td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -133,7 +138,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- Được tập thể lớp công nhận có tinh thần vượt khó, phấn đấu vươn lên trong học tập</p></td>
+                            <td>
+                                <p>- Được tập thể lớp công nhận có tinh thần vượt khó, phấn đấu vươn lên trong học tập</p>
+                            </td>
                             <td style="text-align: center;">2</td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -149,15 +156,16 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p>- ĐTBCHK từ 3,2 đến 4,0</p>
-                            <p>- ĐTBCHK từ 2,0 đến 3,19</p>
-                            <p>- ĐTBCHK dưới 2,0</p>
-                        </td>
+                            <td>
+                                <p>- ĐTBCHK từ 3,2 đến 4,0</p>
+                                <p>- ĐTBCHK từ 2,0 đến 3,19</p>
+                                <p>- ĐTBCHK dưới 2,0</p>
+                            </td>
                             <td style="text-align: center;">
-                            <p>4</p>
-                            <p>2</p>
-                            <p>0</p> 
-                        </td>
+                                <p>4</p>
+                                <p>2</p>
+                                <p>0</p>
+                            </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1" disabled checked>
@@ -165,14 +173,14 @@
                                 </div>
                                 <p> </p>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled >
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
                                     <label class="custom-control-label" for="customCheck1"></label>
                                 </div>
                                 <p> </p>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1" disabled>
                                     <label class="custom-control-label" for="customCheck1"></label>
-                                </div>  
+                                </div>
                             </td>
                             <td style="text-align: center;">
                                 <div class="custom-control custom-checkbox">
@@ -194,8 +202,8 @@
 
                     </tbody>
                 </table>
-                
-                <nav aria-label="..." style="margin-left: 40%;">
+
+                <nav aria-label="..." style="width: 99%;margin: 30px 0 0 57%;">
                     <ul class="pagination">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1">CÁC MỤC CHẤM </a>
@@ -211,7 +219,7 @@
                         </li>
                     </ul>
                 </nav>
-                <button type="button" class="btn btn-primary" style="margin-left: 100%; width: 20%;">Cập nhật</button>
+                <button type="button" class="btn btn-primary" style="margin-left: 124%; width: 20%;">Cập nhật</button>
             </div>
         </div>
     </div>
