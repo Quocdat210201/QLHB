@@ -24,7 +24,7 @@
                         <a class="nav-link" href="index.php?router=updateDRL">Xem điểm</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Quản lý mục chấm</a>
+                        <a class="nav-link" href="index.php?router=DuyetHB">Duyệt học bổng</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="index.php?router=notification">Thông báo</a>
