@@ -1,3 +1,22 @@
+<?php
+$sever = "localhost";
+$username = "root";
+$password = "";
+$database = "qlhb_2";
+$conn = new mysqli($sever, $username, $password, $database);
+if ($conn->connect_error) {
+    die("connection failed: " . $conn->connect_error);
+}
+function page_redirect($location)
+{
+    echo '<META HTTP-EQUIV="Refresh" Content="0; URL=' . $location . '">';
+    exit;
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +25,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
@@ -18,6 +40,7 @@
 </head>
 
 <body>
+    <?php include("system/header.php"); ?>
     <div class="wrappercl">
         <div class="container-wrap">
             <div class="col-12 col-lg-9">
@@ -33,19 +56,39 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td style="text-align: center ;" scope="row">1</td>
-                            <td style="text-align: center ;">1911505310109</td>
-                            <td style="font-weight: bold    ;">Nguyễn Vũ Dũng</td>
-                            <td style="text-align: center ;">90</td>
-                            <td style="color: red; text-align: center;">3.9</td>
-                        </tr>
+                        <?php
+
+                        if (isset($_GET['updateid'])) {
+                            $id = $_GET['updateid'];
+                            $sql_get = "SELECT maDRL,drl.maSV,sv.tenSV,diemRL FROM `diemrenluyen` drl, `sinhvien` sv WHERE drl.maSV = sv.maSV and drl.maDRL = '$id'";
+                            $result = mysqli_query($conn, $sql_get);
+                            if ($result) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $maDRL = $row['maDRL'];
+                                    $maSV = $row['maSV'];
+                                    $tenSV = $row['tenSV'];
+                                    $drl = $row['diemRL'];
+    
+                                    echo '<tr>
+                                        <td style="text-align: center ;" scope="row">' . 1 . '</td>
+                                        <td style="text-align: center ;">' . $maSV . '</td>
+                                        <td style="font-weight: bold    ;">' . $tenSV . '</td>
+                                        <td style="text-align: center ;">' . $drl . '</td>
+                                        <td style="text-align: center ;">3.9</td>
+                                    </tr>';
+                                }
+                            } else {
+                                die(mysqli_error($conn));
+                            }
+                        }
+                        ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-    <div class="container"  style="max-width:90%; margin: 0 auto 10px; padding: 10px 13px;">
+
+    <div class="container" style="max-width:90%; margin: 0 auto 10px; padding: 10px 13px;">
         <div class="row">
             <div class="col-12 col-lg-10">
                 <!-- <tr style=" background-color: #053FC9;color: whitesmoke; text-align: center; "> -->
@@ -203,6 +246,7 @@
                     </tbody>
                 </table>
 
+                
                 <nav aria-label="..." style="width: 99%;margin: 30px 0 0 57%;">
                     <ul class="pagination">
                         <li class="page-item disabled">
@@ -222,7 +266,9 @@
                 <button type="button" class="btn btn-primary" style="margin-left: 124%; width: 20%;">Cập nhật</button>
             </div>
         </div>
+
     </div>
+
 </body>
 
 </html>
