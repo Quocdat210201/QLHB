@@ -38,7 +38,7 @@
         </form>
     </div>
     <div id="logologin">
-        <img src="././assets/img/logologin.png">
+        <img src="././assets/img/logologin.png" alt="">
     </div>
         
 </div>

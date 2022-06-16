@@ -18,6 +18,11 @@
                     $router = '';
                 }
                 
+                // if(isset($_REQUEST['deleteDRLid'])){
+                //     $deleteDRL = $_REQUEST['deleteDRLid'];
+                //     include("libs/DRL/deleteDRL.php?deleteid=$deleteDRL");
+                // }
+
                 if($router == 'login'){
                     include("libs/login.php");
                 }elseif($router == 'statistical'){
@@ -29,15 +34,17 @@
                 }elseif($router == 'notification'){
                     include("libs/notification.php");
                 }elseif($router == 'updateDRL'){
-                    include("libs/CapNhatDRL.php");
+                    include("CapNhatDRL.php");
                 }elseif($router == 'detail_updateDRL'){
-                    include("libs/CapNhatDRL_ChiTiet.php");
+                    include("CapNhatDRL_ChiTiet.php");
                 }elseif($router == 'DuyetHB'){
-                    include("libs/DuyetHB.php");
+                    include("libs/DuyetHB/DuyetHB.php");
                 }elseif($router == 'DuyetHB_DRL'){
-                    include("libs/DuyetHB_DRL.php");
+                    include("libs/DuyetHB/DuyetHB_DRL.php");
                 }elseif($router == 'DuyetHB_HK'){
                     include("libs/DuyetHB_HK.php");
+                }elseif($router == 'deleteDRL'){
+                    include("libs/DRL/deleteDRL.php");
                 }else{
                     include("libs/index.php");
                 }

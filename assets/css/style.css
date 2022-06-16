@@ -61,10 +61,14 @@
 }
 
 /* -------------footer------------------------------------ */
-.footer {
-  width: 100%;
-  height: 100px;
+.footer-section {
   background-image: linear-gradient(0deg, rgb(94, 160, 246), white);
+}
+
+.footer {
+  max-width: 1333px;
+  margin: auto;
+  height: 100px;
 }
 
 .footer .adress {
