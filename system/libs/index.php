@@ -235,21 +235,6 @@
                     Quyết định ban hành học bổng toàn phần và bán phần cho thí sinh trúng tuyển vào học các ngành Ngôn ngữ Anh, Ngôn ngữ Hàn Quốc, Ngôn ngữ Trung Quốc và Ngôn ngữ Nhật trong kỳ tuyển sinh đại học năm 2022.
                 </div>
             </div>
-            <div class="box-new-item">
-                <div class="box-new-item-wrap">
-                    <img src="./assets/img/logo-star.jpg" alt="" style="width: 75px;margin: 0 22px 0 0;height: 75px;">
-                    <div class="box-new-item-content">
-                        <h4 style="font-size: 1.3rem">Học bổng cho Thí sinh Trúng tuyển vào trường Đại học Sư phạm Kỹ Thuật năm 2022 theo Phương thức Xét tuyển Học bạ THPT</h4>
-                        <p style="opacity: 0.6">10/02/2022</p>
-                    </div>
-                </div>
-                <div class="box-new-item-body">
-                    <p class="box-new-item-body-content">
-                    700 suất học bổng cho những thí sinh trúng tuyển vào Đại học hệ chính quy của Trường Đại học Sư phạm Kỹ thuật năm 2022 theo phương thức Xét tuyển bằng Học bạ THPT. Học bổng được cấp cho những thí sinh có tổng...
-                    </p>
-                </div>
-            </div>
-
         </div>
     </div>
 
