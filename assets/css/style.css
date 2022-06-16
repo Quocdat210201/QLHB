@@ -384,3 +384,24 @@ table.table-striped {
   width: 99%;
   text-align: center;
 }
+/* table */
+.wrap {
+  width: 400px;
+}
+.wrap table {
+  table-layout: fixed;
+  width: 100%;
+}
+.wrap table.head {
+  width: calc(100% - 15px);
+}
+.wrap table.head tr td {
+  background: #eee;
+}
+
+table tr td {
+  border: 1px solid #eee;
+  padding: 5px;
+  word-wrap: break-word;
+}
+

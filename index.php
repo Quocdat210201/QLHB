@@ -15,6 +15,8 @@
 <body>
     <div class="app">
         <?php
+        session_start();
+        include("connect/connect.php");
         include("system/header.php");
         include("system/main.php");
         include("system/footer.php");
