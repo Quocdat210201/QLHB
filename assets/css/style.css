@@ -65,6 +65,8 @@
   width: 100%;
   height: 100px;
   background-image: linear-gradient(0deg, rgb(94, 160, 246), white);
+  position:absolute;
+  bottom:0;
 }
 
 .footer .adress {
