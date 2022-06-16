@@ -173,11 +173,36 @@
 
 .homepage {
   width: 100%;
-
+  margin: 10px 5px;
 }
 
-.homepage img {
-  width: 100%;
+.home{
+  height: 250px;
+  width: 95%;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  border-bottom:1px solid #238dff
+}
+.home #imghome{
+  width: 40%;
+  float: left;
+  margin: 15px 15px;
+}
+
+.home #imghome img{
+  height: 70%;
+  width: 60%;
+}
+
+.home #texthome{
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.home #texthome a{
+  color: #ff3923;
 }
 
 /*------------statistical-----------*/
