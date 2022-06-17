@@ -58,11 +58,13 @@
                     </thead>
                     <tbody>
                         <?php
+                        $stt = 0;
                         while ($data = mysqli_fetch_array($search_result)) {
 
-                            $stt = 1; ?>
+                            
+                            $stt++; ?>
                             <tr>
-                                <td style="text-align: center ;" scope="row"><?php echo $stt++ ?></td>
+                                <td style="text-align: center ;" scope="row"><?php echo $stt ?></td>
                                 <td style="text-align: center ;"><?php echo $data['maSV'] ?></td>
                                 <td style="font-weight: bold    ;"><?php echo $data['tenSV'] ?></td>
                                 <td style="text-align: center ;"><?php echo $data['maLop'] ?></td>
