@@ -40,7 +40,7 @@
                 <h4 class="list-student-desc">
                     Danh sách sinh viên
                 </h4>
-                <form class="form-inline" action="" style="display: inline; margin-left: 280px;">
+                <form class="form-inline" action="" style="display: inline; margin-left: 280px;" method="POST">
                     <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên..." name="valueToSearch">
                     <input class="btn btn-success" type="submit" name="search" value="Tìm kiếm"></input>
                 </form>
