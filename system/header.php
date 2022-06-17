@@ -73,6 +73,9 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="index.php?router=notification">Thông báo</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php?router=dssv">Danh sách sinh viên</a>
+                    </li>
                 </ul>
                 
             </div>

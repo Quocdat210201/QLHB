@@ -45,6 +45,8 @@
                     include("libs/DuyetHB_HK.php");
                 }elseif($router == 'deleteDRL'){
                     include("libs/DRL/deleteDRL.php");
+                }elseif($router == 'dssv'){
+                    include("libs/list_sinhvien.php");
                 }else{
                     include("libs/index.php");
                 }
