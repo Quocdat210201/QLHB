@@ -38,13 +38,15 @@
                 }elseif($router == 'detail_updateDRL'){
                     include("CapNhatDRL_ChiTiet.php");
                 }elseif($router == 'DuyetHB'){
-                    include("libs/DuyetHB/DuyetHB.php");
+                    include("DuyetHB.php");
                 }elseif($router == 'DuyetHB_DRL'){
-                    include("libs/DuyetHB/DuyetHB_DRL.php");
+                    include("DuyetHB_DRL.php");
                 }elseif($router == 'DuyetHB_HK'){
-                    include("libs/DuyetHB_HK.php");
+                    include("DuyetHB_HK.php");
+                }elseif($router == 'DuyetHB_Dt'){
+                    include("DuyetHB_ChiTiet.php");
                 }elseif($router == 'deleteDRL'){
-                    include("libs/DRL/deleteDRL.php");
+                    include("deleteDRL.php");
                 }else{
                     include("libs/index.php");
                 }
