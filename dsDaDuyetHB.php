@@ -2,7 +2,7 @@
 $sever = "localhost";
 $username = "root";
 $password = "";
-$database = "qlhb_2";
+$database = "qlhb";
 $conn = new mysqli($sever, $username, $password, $database);
 if ($conn->connect_error) {
     die("connection failed: " . $conn->connect_error);
@@ -60,12 +60,8 @@ if (isset($_POST['duyetALL'])) {
             <label for="" style="font-weight: bold ;">Loại học bổng: </label>
             <select name="loaiHB" id="loaiHB">
                 <optgroup label="Loại Học Bổng: ">
-                    <option value="hb0">
-                        Tất cả
-                    </option>
-                    <option value="hb1">
-                        Khuyến khích học tập
-                    </option>
+                    <option value="hb0">Tất cả</option>
+                    <option value="hb1"> Khuyến khích học tập</option>
                     <option value="hb2">Học bổng chắp cánh ước mơ</option>
                     <option value="hb3">Học bổng thử thách UTE</option>
                     <option value="hb4">Hổng bổng vượt khó</option>
@@ -85,19 +81,19 @@ if (isset($_POST['duyetALL'])) {
                     <option value="test3">Mạng</option>
                 </optgroup>
             </select>
-            <form class="form-inline" action="/action_page.php" style="display: inline; margin-left: 150px;">
-                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên...">
-                <button class="btn btn-success" type="submit">Tìm kiếm</button>
+            <form class="form-inline" action="" style="display: inline; margin-left: 280px;" method="POST">
+                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên..." name="valueToSearch">
+                <input class="btn btn-success" type="submit" name="search" value="Tìm kiếm"></input>
             </form>
+
         </div>
     </div>
 
     <div class="container" style="margin-left:10%; margin-right: auto;">
-    <a href="http://localhost/QLHB/index.php?router=DuyetHB">
-    <input type="submit" class="btn btn-info" style=" width: 19%; margin-bottom: 20px;" value="Xem danh sách chưa duyệt">
-    </a>
+        <a href="http://localhost/QLHB/index.php?router=DuyetHB">
+            <input type="submit" class="btn btn-info" style=" width: 19%; margin-bottom: 20px;" value="Xem danh sách chưa duyệt">
+        </a>
         <!-- <form action="dsDaDuyetHB.php" method="POST">
-            
         </form> -->
         <div class="row">
             <div class="col-12 col-lg-10">
@@ -121,22 +117,36 @@ if (isset($_POST['duyetALL'])) {
                         <tbody>
                             <?php
 
-                            $sql = "SELECT maDS,ds.maSV,sv.tenSV,hb.tenHB,xl.tenXL,xl.tiennhan,DATE_FORMAT(ngayduyet,'%d/%m/%Y') as ngayduyet, ds.trangthaiduyet FROM `dsdudieukien` ds, `sinhvien` sv,`loaihocbong` hb,`xeploai` xl WHERE ds.maSV = sv.maSV and ds.maHB = hb.maHB and ds.maXL = xl.maXL and trangthaiduyet = 1";
-                            $result = mysqli_query($conn, $sql);
-                            $stt = 0;
-                            if ($result) {
-                                while ($row = mysqli_fetch_assoc($result)) {
-                                    $stt++;
-                                    $maHB = $row['maDS'];
-                                    $maSV = $row['maSV'];
-                                    $tenSV = $row['tenSV'];
-                                    $hb = $row['tenHB'];
-                                    $xl = $row['tenXL'];
-                                    $tien = $row['tiennhan'];
-                                    $ngayduyet = $row['ngayduyet'];
-                                    $tien = number_format($tien);
+                            if (isset($_POST['search'])) {
+                                $valueToSearch = $_POST['valueToSearch'];
+                                $query = "SELECT maDS,ds.maSV,sv.tenSV,hb.tenHB,xl.tenXL,xl.tiennhan,DATE_FORMAT(ngayduyet,'%d/%m/%Y') as ngayduyet, ds.trangthaiduyet FROM `dsdudieukien` ds, `sinhvien` sv,`loaihocbong` hb,`xeploai` xl WHERE ds.maSV = sv.maSV and ds.maHB = hb.maHB and ds.maXL = xl.maXL and trangthaiduyet = 1 and tenSV like '%" . $valueToSearch . "%'";
+                                $search_result = filterTable($query);
+                            } else {
+                                $query = "SELECT maDS,ds.maSV,sv.tenSV,hb.tenHB,xl.tenXL,xl.tiennhan,DATE_FORMAT(ngayduyet,'%d/%m/%Y') as ngayduyet, ds.trangthaiduyet FROM `dsdudieukien` ds, `sinhvien` sv,`loaihocbong` hb,`xeploai` xl WHERE ds.maSV = sv.maSV and ds.maHB = hb.maHB and ds.maXL = xl.maXL and trangthaiduyet = 1";
+                                $search_result = filterTable($query);
+                            }
 
-                                    echo '<tr>
+                            function filterTable($query)
+                            {
+                                $connnect = mysqli_connect("localhost", "root", "", "qlhb");
+                                $filter_Result = mysqli_query($connnect, $query);
+                                return $filter_Result;
+                            }
+
+
+                            $stt = 0;
+                            while ($row = mysqli_fetch_assoc($search_result)) {
+                                $stt++;
+                                $maHB = $row['maDS'];
+                                $maSV = $row['maSV'];
+                                $tenSV = $row['tenSV'];
+                                $hb = $row['tenHB'];
+                                $xl = $row['tenXL'];
+                                $tien = $row['tiennhan'];
+                                $ngayduyet = $row['ngayduyet'];
+                                $tien = number_format($tien);
+
+                                echo '<tr>
                                 <td style="text-align: center ;" scope="row">' . $stt . '</td>
                                 <td style="text-align: center ;">' . $maSV . '</td>
                                 <td style="font-weight: bold    ;">' . $tenSV . '</td>
@@ -149,7 +159,6 @@ if (isset($_POST['duyetALL'])) {
                                 <td style="font-style: italic; color: blue; text-align: center;"><a href="DuyetHB_ChiTiet.php?updateid=' .  $maSV . '">Xem chi tiết</a></td>
                                 <td style="font-style: italic; color: blue; text-align: center;"><a href="DuyetHB_Rieng.php?updatehb2=' .  $maSV . '"><button type="button" class="btn btn-outline-danger" >Xóa Duyệt</button></a> </td>
                                 </tr>';
-                                }
                             }
                             ?>
                         </tbody>
@@ -160,10 +169,27 @@ if (isset($_POST['duyetALL'])) {
                 </form>
                 </br> </br>
             </div>
-                     
         </div>
     </div>
-
+    <script type = "text/javascript">
+        $(document).ready(function(){
+            $("#loaiHB").on('change', function(){
+                var value = $(this).val();
+                // alert(value);
+                $.ajax({
+                    url: "fetch.php",
+                    type: "POST",
+                    data: "request = " + value,
+                    beforeSend: function(){
+                        $(".container").html("<span>working...</span>");
+                    },
+                    success: function(data){
+                        $(".container").html(data);
+                    }
+                })
+            })
+        })
+    </script>
 
 </body>
 

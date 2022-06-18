@@ -3,7 +3,6 @@
     font-size: 0.75em;
     bottom:0;
     width: 100%;
-    height: 20px;
     margin-top: 70px;
     position: relative;">
         <div class="footer">

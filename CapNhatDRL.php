@@ -1,17 +1,17 @@
 <?php
-    include "connect.php";
-    if(isset($_GET['updateid'])){
-        $id = $_GET['updateid'];
-        $sql_get = "SELECT maDRL,drl.maSV,sv.tenSV,diemRL FROM `diemrenluyen` drl, `sinhvien` sv WHERE drl.maSV = sv.maSV and drl.maDRL = '$id'";
+include "connect.php";
+if (isset($_GET['updateid'])) {
+    $id = $_GET['updateid'];
+    $sql_get = "SELECT maDRL,drl.maSV,sv.tenSV,diemRL FROM `diemrenluyen` drl, `sinhvien` sv WHERE drl.maSV = sv.maSV and drl.maDRL = '$id'";
 
-        $result = mysqli_query($conn,$sql);
-        
-        if($result){
-            page_redirect("http://localhost/QLHB/index.php?router=updateDRL");
-        }else{
-            die(mysqli_error($conn));
-        }
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        page_redirect("http://localhost/QLHB/index.php?router=updateDRL");
+    } else {
+        die(mysqli_error($conn));
     }
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="jquery.bootstrap-growl.min.js">
-    
+
 
     <title>Document</title>
     <style>
@@ -61,9 +61,9 @@
                     <option value="">-- select one -- </option>
                 </optgroup>
             </select>
-            <form class="form-inline" action="/action_page.php" style="display: inline; margin-left: 280px;">
-                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên...">
-                <button class="btn btn-success" type="submit">Tìm kiếm</button>
+            <form class="form-inline" action="" style="display: inline; margin-left: 280px;" method="POST">
+                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên..." name="valueToSearch">
+                <input class="btn btn-success" type="submit" name="search" value="Tìm kiếm"></input>
             </form>
         </div>
     </div>
@@ -95,27 +95,41 @@
 
                         <?php
 
-                        $sql = "SELECT maDRL,drl.maSV,sv.tenSV, `1.1`+`1.2`+`1.3`+`1.4`+`1.5`+`1.6`+`1.7`+`1.8`+`2.1`+`2.2`+`2.3`+`2.4`+`3.1`+`3.2`+`3.3`+`3.4`+`4.1`+`4.2`+`4.3`+`4.4`+`4.5`+`5.1`+`5.2`+`5.3`+`5.4` as diemRL FROM `diemrenluyen` drl, `sinhvien` sv WHERE drl.maSV = sv.maSV;";
-                        $result = mysqli_query($conn, $sql);
-                        $stt = 0;
-                        if ($result) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $stt++;
-                                $maDRL = $row['maDRL'];
-                                $maSV = $row['maSV'];
-                                $tenSV = $row['tenSV'];
-                                $drl = $row['diemRL'];
+                        if (isset($_POST['search'])) {
+                            $valueToSearch = $_POST['valueToSearch'];
+                            $query = "SELECT maDRL,drl.maSV,sv.tenSV, `1.1`+`1.2`+`1.3`+`1.4`+`1.5`+`1.6`+`1.7`+`1.8`+`2.1`+`2.2`+`2.3`+`2.4`+`3.1`+`3.2`+`3.3`+`3.4`+`4.1`+`4.2`+`4.3`+`4.4`+`4.5`+`5.1`+`5.2`+`5.3`+`5.4` as diemRL FROM `diemrenluyen` drl, `sinhvien` sv WHERE drl.maSV = sv.maSV and  tenSV like '%" . $valueToSearch . "%'";
+                            $search_result = filterTable($query);
+                        } else {
+                            $query = "SELECT maDRL,drl.maSV,sv.tenSV, `1.1`+`1.2`+`1.3`+`1.4`+`1.5`+`1.6`+`1.7`+`1.8`+`2.1`+`2.2`+`2.3`+`2.4`+`3.1`+`3.2`+`3.3`+`3.4`+`4.1`+`4.2`+`4.3`+`4.4`+`4.5`+`5.1`+`5.2`+`5.3`+`5.4` as diemRL FROM `diemrenluyen` drl, `sinhvien` sv WHERE drl.maSV = sv.maSV";
+                            $search_result = filterTable($query);
+                        }
 
-                                echo '<tr>
+                        function filterTable($query)
+                        {
+                            $connnect = mysqli_connect("localhost", "root", "", "qlhb");
+                            $filter_Result = mysqli_query($connnect, $query);
+                            return $filter_Result;
+                        }
+
+
+                        $stt = 0;
+                        while ($row = mysqli_fetch_assoc($search_result)) {
+                            $stt++;
+                            $maDRL = $row['maDRL'];
+                            $maSV = $row['maSV'];
+                            $tenSV = $row['tenSV'];
+                            $drl = $row['diemRL'];
+
+                            echo '<tr>
                                     <td style="text-align: center ;" scope="row">' . $stt . '</td>
                                     <td style="text-align: center ;">' . $maSV . '</td>
                                     <td style="font-weight: bold    ;">' . $tenSV . '</td>
                                     <td style="text-align: center ;">' . $drl . '</td>
                                     <td style="color: red; text-align: center;"><a href="deleteDRL.php?deleteid=' . $maDRL . '" style="color: red;">Hủy kết quả</a></td>
-                                    <td style="font-style: italic; color: blue; text-align: center;"><a href="CapNhatDRL_ChiTiet.php?updateid='.$maDRL.'">Xem chi tiết</a></td>
+                                    <td style="font-style: italic; color: blue; text-align: center;"><a href="CapNhatDRL_ChiTiet.php?updateid=' . $maDRL . '">Xem chi tiết</a></td>
                                 </tr>';
-                            }
                         }
+
                         ?>
                     </tbody>
                 </table>
