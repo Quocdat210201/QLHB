@@ -80,9 +80,9 @@ if (isset($_POST['duyetALL'])) {
                     <option value="test3">Mạng</option>
                 </optgroup>
             </select>
-            <form class="form-inline" action="/action_page.php" style="display: inline; margin-left: 150px;">
-                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên...">
-                <button class="btn btn-success" type="submit">Tìm kiếm</button>
+            <form class="form-inline" action="" style="display: inline; margin-left: 280px;" method="POST">
+                <input class="form-control mr-sm-2" type="text" placeholder="Tìm kiếm sinh viên..." name="valueToSearch">
+                <input class="btn btn-success" type="submit" name="search" value="Tìm kiếm"></input>
             </form>
         </div>
     </div>
@@ -111,11 +111,24 @@ if (isset($_POST['duyetALL'])) {
                         <tbody>
                             <?php
 
-                            $sql = "SELECT maDS,ds.maSV,sv.tenSV,hb.tenHB,xl.tenXL, ds.trangthaiduyet FROM `dsdudieukien` ds, `sinhvien` sv,`loaihocbong` hb,`xeploai` xl WHERE ds.maSV = sv.maSV and ds.maHB = hb.maHB and ds.maXL = xl.maXL and trangthaiduyet = 0";
-                            $result = mysqli_query($conn, $sql);
+                            if (isset($_POST['search'])) {
+                                $valueToSearch = $_POST['valueToSearch'];
+                                $query =  "SELECT maDS,ds.maSV,sv.tenSV,hb.tenHB,xl.tenXL, ds.trangthaiduyet FROM `dsdudieukien` ds, `sinhvien` sv,`loaihocbong` hb,`xeploai` xl WHERE ds.maSV = sv.maSV and ds.maHB = hb.maHB and ds.maXL = xl.maXL and trangthaiduyet = 0 and tenSV like '%" . $valueToSearch . "%'";
+                                $search_result = filterTable($query);
+                            } else {
+                                $query =  "SELECT maDS,ds.maSV,sv.tenSV,hb.tenHB,xl.tenXL, ds.trangthaiduyet FROM `dsdudieukien` ds, `sinhvien` sv,`loaihocbong` hb,`xeploai` xl WHERE ds.maSV = sv.maSV and ds.maHB = hb.maHB and ds.maXL = xl.maXL and trangthaiduyet = 0";
+                                $search_result = filterTable($query);
+                            }
+
+                            function filterTable($query)
+                            {
+                                $connnect = mysqli_connect("localhost", "root", "", "qlhb");
+                                $filter_Result = mysqli_query($connnect, $query);
+                                return $filter_Result;
+                            }
+
                             $stt = 0;
-                            if ($result) {
-                                while ($row = mysqli_fetch_assoc($result)) {
+                                while ($row = mysqli_fetch_assoc($search_result)) {
                                     $stt++;
                                     $maHB = $row['maDS'];
                                     $maSV = $row['maSV'];
@@ -136,7 +149,7 @@ if (isset($_POST['duyetALL'])) {
                                 <td style="font-style: italic; color: blue; text-align: center;"><a href="DuyetHB_Rieng.php?updatehb=' .  $maSV . '"><button type="button" class="btn btn-outline-success" >Duyệt</button></a> </td>
                                 </tr>';
                                 }
-                            }
+                            
                             ?>
                         </tbody>
                     </table>
