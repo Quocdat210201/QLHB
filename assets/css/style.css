@@ -61,12 +61,14 @@
 }
 
 /* -------------footer------------------------------------ */
-.footer {
-  width: 100%;
-  height: 100px;
+.footer-section {
   background-image: linear-gradient(0deg, rgb(94, 160, 246), white);
-  position:absolute;
-  bottom:0;
+}
+
+.footer {
+  max-width: 1333px;
+  margin: auto;
+  height: 100px;
 }
 
 .footer .adress {
@@ -171,11 +173,36 @@
 
 .homepage {
   width: 100%;
-
+  margin: 10px 5px;
 }
 
-.homepage img {
-  width: 100%;
+.home{
+  height: 250px;
+  width: 95%;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  border-bottom:1px solid #238dff
+}
+.home #imghome{
+  width: 40%;
+  float: left;
+  margin: 15px 15px;
+}
+
+.home #imghome img{
+  height: 70%;
+  width: 60%;
+}
+
+.home #texthome{
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.home #texthome a{
+  color: #ff3923;
 }
 
 /*------------statistical-----------*/
@@ -361,3 +388,24 @@ table.table-striped {
   width: 99%;
   text-align: center;
 }
+/* table */
+.wrap {
+  width: 400px;
+}
+.wrap table {
+  table-layout: fixed;
+  width: 100%;
+}
+.wrap table.head {
+  width: calc(100% - 15px);
+}
+.wrap table.head tr td {
+  background: #eee;
+}
+
+table tr td {
+  border: 1px solid #eee;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
